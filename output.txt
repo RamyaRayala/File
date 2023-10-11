@@ -1,0 +1,22 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class EmployeeScheduleAnalyzer {
+    public static void main(String[] args) {
+        // ...
+
+        try {
+            // Analyze the data and find employees meeting the criteria
+            // ...
+
+            // Write the results to output.txt
+            FileWriter writer = new FileWriter("output.txt");
+            for (Employee employee : qualifiedEmployees) {
+                writer.write(employee.getName() + " - " + employee.getPosition() + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
