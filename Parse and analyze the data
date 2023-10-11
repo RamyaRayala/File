@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployeeScheduleAnalyzer {
+    public static void main(String[] args) {
+        // Initialize data structures
+        List<Employee> employees = new ArrayList<>();
+        // ...
+
+        try {
+            // Read the input file
+            // ...
+
+            while ((line = reader.readLine()) != null) {
+                // Parse and analyze each line
+                Employee employee = Employee.parseFromLine(line);
+
+                if (employee != null) {
+                    employees.add(employee);
+                }
+            }
+            reader.close();
+
+            // Analyze the data
+            // Implement your logic to find employees meeting the criteria
+            // ...
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class Employee {
+    private String name;
+    private Date date;
+    private int hoursWorked;
+
+    // Constructor and getters
+    // ...
+
+    public static Employee parseFromLine(String line) {
+        // Implement logic to parse a line and create an Employee object
+        // ...
+
+        return null; // Return null if the line cannot be parsed as an employee
+    }
+}
